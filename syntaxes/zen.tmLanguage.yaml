@@ -54,7 +54,7 @@ repository:
     keywords:
         name: keyword.control.zen
         match: \b(if|loop|return|args|body|self)\b
-        
+
     types:
         name: entity.name.type.zen
         match: \b[A-Z][a-zA-Z|\d]*\b
@@ -80,7 +80,7 @@ repository:
         match: \b[A-Z|_]+\b
 
     functionCalls:
-        match: \b([a-z][a-zA-Z]*)\b(\s+)?\(
+        match: \b([a-z][a-zA-Z|_|\d]*)\b(\s+)?\(
         captures:
             '1':
                 name: entity.name.function.zen
