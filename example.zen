@@ -1,3 +1,11 @@
+std: std()
+{
+     String,
+     Boolean,
+     Int,
+     Type
+}: std.types.String
+
 // this is a comment
 Person: Type {
      name: String
@@ -9,13 +17,13 @@ person: Person(
      age: Int.i32(42)
 )
 
-isAdult: Function {
+isOpenAi: Function {
      args: {
           person: Person
      },
      return: {Boolean},
      body: {
-          if (person.age < 18) {
+          if (person.name == String("OpenAI")) {
                return(Boolean(false))
           } else {
                return(Boolean(true))
@@ -23,6 +31,6 @@ isAdult: Function {
      }
 }
 
-isAdult()
+io.print(isOpenAi(person))
 
 SECRET_CONSTANT: Const{String("secret")}

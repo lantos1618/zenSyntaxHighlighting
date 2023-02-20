@@ -1,0 +1,76 @@
+
+$schema: https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json
+name: Zen programing language
+scopeName: source.zen
+patterns:
+  - include: "#comments"
+  - include: "#numbers"
+  - include: "#strings"
+  - include: "#keywords"
+  - include: "#operators"
+  - include: "#types"
+  - include: "#functionDefinitions"
+  - include: "#functionCalls"
+repository:
+    comments:
+        name: comment.line.double-slash.zen
+        begin: "//"
+        end: "\n"
+    numbers:
+        name: constant.numeric.zen
+        match: "\\b\\d+\\b"
+    strings:
+        name: string.quoted.double.zen
+        begin: "\""
+        end: "\""
+        patterns:
+        -
+            name: constant.character.escape.zen
+            match: "\\\\."
+    operators:
+        patterns:
+        -
+            name: keyword.operator.zen
+            match: "\\b(=|\\+|\\-|\\*|\\/|\\%|\\^|\\&|\\||\\~|\\!|\\>|\\<|\\?|\\:|\\,|\\.)\\b"
+    keywords:
+        patterns:
+        -
+            name: keyword.control.zen
+            match: "\\b(if|while|for|return|args|body)\\b"
+    types:
+        patterns:
+        -
+            name: entity.name.type.zen
+            # match: "(\\w+)(\\s+)?:\\s+(Type)"
+            match: "\\b[A-Z][a-zA-Z]*\\b"
+            captures:
+                '1':
+                    name: entity.name.type.zen
+                '3':
+                    name: entity.name.type.zen
+    functionDefinitions:
+        patterns:
+        -
+            name: entity.name.function.zen
+            match: "(\\w+)(\\s+)?:\\s+(Function)"
+            captures:
+                '1':
+                    name: entity.name.function.zen
+                '3':
+                    name: entity.name.type.zen
+    functionCalls:
+        patterns:
+        -
+            name: entity.name.function.zen
+            match: "\\b[a-zA-Z]*\\b(\\s+)?\\("
+            captures:
+                '1':
+                    name: entity.name.function.zen
+    identifiers:
+        patterns:
+        -
+            name: variable.name
+            match: "\\b[a-zA-Z]*\\b"
+            captures:
+                '1':
+                    name: variable.name
