@@ -1,0 +1,28 @@
+// this is a comment
+Person: Type {
+     name: String
+     age: Int.i32
+}
+
+person: Person(
+     name: String("OpenAI"),
+     age: Int.i32(42)
+)
+
+isAdult: Function {
+     args: {
+          person: Person
+     },
+     return: {Boolean},
+     body: {
+          if (person.age < 18) {
+               return(Boolean(false))
+          } else {
+               return(Boolean(true))
+          }
+     }
+}
+
+isAdult()
+
+SECRET_CONSTANT: Const{String("secret")}
