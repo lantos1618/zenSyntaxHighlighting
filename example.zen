@@ -24,9 +24,9 @@ isOpenAi: Function {
      return: {Boolean},
      body: {
           if (person.name == String("OpenAI")) {
-               return(Boolean(false))
+               return(Boolean.false)
           } else {
-               return(Boolean(true))
+               return(Boolean.true)
           }
      }
 }
