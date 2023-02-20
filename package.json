@@ -1,0 +1,25 @@
+{
+  "name": "zen",
+  "displayName": "Zen programing language syntax highlighting",
+  "description": "Zen programing language systax highlighting",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "zen",
+      "aliases": ["Zen programing language", "zen"],
+      "extensions": [".zen"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "zen",
+      "scopeName": "source.zen",
+      "path": "./syntaxes/zen.tmLanguage.json"
+    }]
+  }
+}
