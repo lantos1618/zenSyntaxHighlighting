@@ -77,10 +77,10 @@
     },
     "types": {
       "name": "entity.name.type.zen",
-      "match": "\\b[A-Z][a-zA-Z|\\d]*\\b"
+      "match": "\\b[A-Z][a-zA-Z|_|\\d|\\d]*\\b"
     },
     "typeCalling": {
-      "match": "(\\b[A-Z][a-zA-Z]*\\b)\\(",
+      "match": "(\\b[A-Z][a-zA-Z|_|\\d]*\\b)\\(",
       "captures": {
         "1": {
           "name": "entity.name.type.zen"
@@ -93,7 +93,7 @@
     },
     "functionDefinitions": {
       "name": "entity.name.function.zen",
-      "match": "(\\b[a-z][a-zA-Z]*\\b):(\\s+)?(Function)",
+      "match": "(\\b[a-z][a-zA-Z|_|\\d]*\\b):(\\s+)?(Function)",
       "captures": {
         "1": {
           "name": "entity.name.function.zen"
