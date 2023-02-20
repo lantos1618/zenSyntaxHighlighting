@@ -19,16 +19,13 @@
       "include": "#operators"
     },
     {
-      "include": "#constantDefinitions"
-    },
-    {
-      "include": "#types"
-    },
-    {
       "include": "#functionDefinitions"
     },
     {
       "include": "#functionCalls"
+    },
+    {
+      "include": "#types"
     },
     {
       "include": "#variables"

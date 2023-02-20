@@ -8,10 +8,10 @@ patterns:
   - include: "#strings"
   - include: "#keywords"
   - include: "#operators"
-  - include: "#constantDefinitions" # this isn't working atm TODO
-  - include: "#types"
+#   - include: "#constantDefinitions" # this isn't working atm TODO
   - include: "#functionDefinitions"
   - include: "#functionCalls"
+  - include: "#types"
   - include: "#variables"
 repository:
     comments:
