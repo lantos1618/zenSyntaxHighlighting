@@ -4,17 +4,19 @@ std: std()
      Boolean,
      Int,
      Type
-}: std.types.String
+}: std.types
+io: std.io
 
 // this is a comment
 Person: Type {
-     name: String
-     age: Int.i32
+     name:     String
+     age:      Int.I32
 }
 
 person: Person(
      name: String("OpenAI"),
-     age: Int.i32(42)
+     age: Int.I32(42)
+     amount: Float.F32(100.00)
 )
 
 isOpenAi: Function {
@@ -24,9 +26,9 @@ isOpenAi: Function {
      return: {Boolean},
      body: {
           if (person.name == String("OpenAI")) {
-               return(Boolean.false)
+               return(Boolean.False)
           } else {
-               return(Boolean.true)
+               return(Boolean.True)
           }
      }
 }
