@@ -22,13 +22,26 @@ repository:
         name: constant.numeric.zen
         match: \b\d[\d_]*(\.?)[\d_]*\b
     strings:
-        name: string.quoted.double.zen
-        begin: \"
-        end: \"
+        # match "string"
         patterns:
-        -
-            name: constant.character.escape.zen
-            match: \.
+        -   name: string.quoted.double.zen
+            begin: \"
+            end: \"
+            patterns:
+            -
+                name: constant.character.escape.zen
+                match: \.
+
+        # match " }
+        # end on ${ or "
+        # -   name: string.quoted.double.zen
+        #     begin: \"|\}
+        #     end: \$\{|\"
+        #     patterns:
+        #     -
+        #         name: constant.character.escape.zen
+        #         match: \.
+
     operators:
         patterns:
         -
@@ -40,7 +53,8 @@ repository:
             
     keywords:
         name: keyword.control.zen
-        match: \b(if|while|for|return|args|body)\b
+        match: \b(if|loop|return|args|body|self)\b
+        
     types:
         name: entity.name.type.zen
         match: \b[A-Z][a-zA-Z|\d]*\b

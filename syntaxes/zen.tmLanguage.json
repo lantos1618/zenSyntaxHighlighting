@@ -45,13 +45,17 @@
       "match": "\\b\\d[\\d_]*(\\.?)[\\d_]*\\b"
     },
     "strings": {
-      "name": "string.quoted.double.zen",
-      "begin": "\\\"",
-      "end": "\\\"",
       "patterns": [
         {
-          "name": "constant.character.escape.zen",
-          "match": "\\."
+          "name": "string.quoted.double.zen",
+          "begin": "\\\"",
+          "end": "\\\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.zen",
+              "match": "\\."
+            }
+          ]
         }
       ]
     },
@@ -69,7 +73,7 @@
     },
     "keywords": {
       "name": "keyword.control.zen",
-      "match": "\\b(if|while|for|return|args|body)\\b"
+      "match": "\\b(if|loop|return|args|body|self)\\b"
     },
     "types": {
       "name": "entity.name.type.zen",
