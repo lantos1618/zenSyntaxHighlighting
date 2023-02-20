@@ -19,6 +19,9 @@
       "include": "#operators"
     },
     {
+      "include": "#constantDefinitions"
+    },
+    {
       "include": "#functionDefinitions"
     },
     {
@@ -82,7 +85,7 @@
     },
     "variables": {
       "name": "variable.name",
-      "match": "\\b[a-z][a-zA-Z|\\d]*\\b"
+      "match": "\\b[a-z][a-zA-Z|_|\\d]*\\b"
     },
     "functionDefinitions": {
       "name": "entity.name.function.zen",
@@ -95,6 +98,10 @@
           "name": "entity.name.type.zen"
         }
       }
+    },
+    "constantDefinitions": {
+      "name": "entity.name.constant.zen",
+      "match": "\\b[A-Z|_]+\\b"
     },
     "functionCalls": {
       "match": "\\b([a-z][a-zA-Z]*)\\b(\\s+)?\\(",
