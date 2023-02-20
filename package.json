@@ -16,6 +16,10 @@
     "languages": [
       {
         "id": "zen",
+        "icon": {
+          "light": "./icons/zen.png",
+          "dark": "./icons/zen.png"
+        },
         "aliases": [
           "Zen programing language",
           "zen"
