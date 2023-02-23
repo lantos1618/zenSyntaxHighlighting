@@ -73,7 +73,7 @@
     },
     "keywords": {
       "name": "keyword.control.zen",
-      "match": "\\b(if|loop|return|args|body|self)\\b"
+      "match": "\\b(if|loop|return|args|void|body|self)\\b"
     },
     "types": {
       "name": "entity.name.type.zen",
