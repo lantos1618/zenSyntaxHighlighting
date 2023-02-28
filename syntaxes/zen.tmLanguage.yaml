@@ -65,11 +65,11 @@ repository:
                 name: entity.name.type.zen
     variables:
         name: variable.name
-        match: \b[a-z][a-zA-Z|_|\d]*\b
+        match: \b[a-z|_][a-zA-Z|_|\d]*\b
 
     functionDefinitions:
         name: entity.name.function.zen
-        match: (\b[a-z][a-zA-Z|_|\d]*\b):(\s+)?(Function)
+        match: (\b[a-z|_][a-zA-Z|_|\d]*\b):(\s+)?(Function)
         captures:
             '1':
                 name: entity.name.function.zen
@@ -80,7 +80,7 @@ repository:
         match: \b[A-Z|_]+\b
 
     functionCalls:
-        match: \b([a-z][a-zA-Z|_|\d]*)\b(\s+)?\(
+        match: \b([a-z|_][a-zA-Z|_|\d]*)\b(\s+)?\(
         captures:
             '1':
                 name: entity.name.function.zen
