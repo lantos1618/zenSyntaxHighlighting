@@ -48,12 +48,12 @@
       "patterns": [
         {
           "name": "string.quoted.double.zen",
-          "begin": "\\\"",
-          "end": "\\\"",
+          "begin": "\"",
+          "end": "\"",
           "patterns": [
             {
               "name": "constant.character.escape.zen",
-              "match": "\\."
+              "match": "\\\\."
             }
           ]
         }

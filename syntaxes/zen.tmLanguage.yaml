@@ -25,22 +25,12 @@ repository:
         # match "string"
         patterns:
         -   name: string.quoted.double.zen
-            begin: \"
-            end: \"
+            begin: '"'
+            end: '"'
             patterns:
             -
                 name: constant.character.escape.zen
-                match: \.
-
-        # match " }
-        # end on ${ or "
-        # -   name: string.quoted.double.zen
-        #     begin: \"|\}
-        #     end: \$\{|\"
-        #     patterns:
-        #     -
-        #         name: constant.character.escape.zen
-        #         match: \.
+                match: '\\.'
 
     operators:
         patterns:
